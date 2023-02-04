@@ -1,12 +1,11 @@
 // Get the info associated with each restaurant. 
-require('dotenv').config();
 
 const { Configuration, OpenAIApi } = require("openai");
 
 /** Get info associated with restaurantName. */
 async function getInfo(restaurantName) {
     const configuration = new Configuration({
-    apiKey: process.env.OPEN_AI_API_KEY,
+    apiKey: "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",
     });
     const openai = new OpenAIApi(configuration);
     const response = await openai.createCompletion({
