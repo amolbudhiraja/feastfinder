@@ -1,8 +1,11 @@
 // Reccomendation system to reccomend restaurants to users based on user preferences. 
 
+import restaurantData from "../dataset";
+
 /** Retaurant Object */
 class Restaurant {
-    constructor(setting, price, cuisine, petFriendly, seating) {
+    constructor(name, setting, price, cuisine, petFriendly, seating) {
+      this.name = name; 
       this.setting = setting;
       this.price = price;
       this.cuisine = cuisine;
@@ -11,17 +14,13 @@ class Restaurant {
     }
   }
   
-  /** Define the training restaurant data.  */
-  const restaurants = [
-    new Restaurant(2, 2, 4, 1, 1),
-    new Restaurant(1, 1, 1, 2, 2),
-    new Restaurant(3, 3, 2, 1, 1),
-    new Restaurant(1, 2, 3, 2, 1),
-    new Restaurant(2, 3, 5, 1, 1),
-    new Restaurant(3, 3, 6, 2, 2),
-    new Restaurant(2, 1, 5, 2, 2),
-    new Restaurant(1, 2, 6, 1, 1)
-  ];
+  /** Define and seed the training restaurant data. */
+  var restaurants = [];
+  for (let i = 0; i < restaurantData.length; i++) {
+    let restaurantDataObject = restaurantData[i];
+    let restaurantObject = new Restaurant(restaurantDataObject.name, restaurantDataObject.setting, restaurantDataObject.price, restaurantDataObject.cuisines, restaurantDataObject.petFriendly, restaurantDataObject.seating);
+    restaurants.push(restaurantObject);
+  }
   
   /** Calculate the Euclidian Distance between the restaurant objects.  */
   function euclideanDistance(a, b) {
@@ -34,7 +33,7 @@ class Restaurant {
     return Math.sqrt(distance);
   }
   
-  /** Return the k closest restaurants from the training set based on the preferences.  */
+  /** Return the k closest restaurants from the training set based on the preferences. */
   function recommendRestaurant(preferences, k) {
     const distances = [];
     for (let i = 0; i < restaurants.length; i++) {
@@ -43,10 +42,11 @@ class Restaurant {
       distances.push({ restaurant: currentRestaurant, distance });
     }
     distances.sort((a, b) => a.distance - b.distance);
-    const recommendedRestaurants = distances.slice(0, k).map(d => d.restaurant);
+    const recommendedRestaurants = distances.slice(0, k).map(d => d.restaurant.name);
     return recommendedRestaurants;
   }
 
+  /** Given the userPreferences, give a reccomendation.  */
   function getReccomendation() {
     const userPreferences = new Restaurant(1, 2, 3, 1, 1);
     const k = 3; // Number of reccomendations. (# of neighbors in KNN)
