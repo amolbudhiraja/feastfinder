@@ -150,5 +150,148 @@
         "cuisines": 5, 
         "pet": 2, 
         "seating": 1
+    },
+    {
+        "name": "The Bubble Tea House", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 6, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+         "name": "The Fast Foodie", 
+         "setting": 3, 
+         "price": 1, 
+         "cuisines": 1, 
+         "pet": 2, 
+         "seating": 1
+    },
+    {
+      "name": "The Spicy Spot", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 3, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Italian Trattoria", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 4, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Pizza Palace", 
+        "setting": 3, 
+        "price": 1, 
+        "cuisines": 5, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Boba Bar", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 6, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Asian Bistro", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 2, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Mexican Grill", 
+        "setting": 3, 
+        "price": 1, 
+        "cuisines": 3, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Italian Osteria", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 4, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Pizza Pit", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 5, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Boba Boutique", 
+        "setting": 3, 
+        "price": 1, 
+        "cuisines": 6, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Asian Fusion", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 2, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Mexican cantina", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 3, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Italian Trattoria", 
+        "setting": 3, 
+        "price": 1, 
+        "cuisines": 4, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Pizza Parlor", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 5, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Boba Café", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 6, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Asian Noodle House", 
+        "setting": 3, 
+        "price": 1, 
+        "cuisines": 2, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Mexican Restaurant", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 3, 
+        "pet": 2, "seating": 1
     }
 ]  
