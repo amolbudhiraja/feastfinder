@@ -1,21 +1,154 @@
 [
-    {"name": "The Tasty Thai", "setting": 1, "price": 2, "cuisines": 2, "pet": 2, "seating": 1},
-    {"name": "La Taqueria", "setting": 2, "price": 3, "cuisines": 3, "pet": 2, "seating": 1},
-    {"name": "Roma Ristorante", "setting": 3, "price": 1, "cuisines": 4, "pet": 2, "seating": 1},
-    {"name": "The Slice Joint", "setting": 1, "price": 1, "cuisines": 5, "pet": 1, "seating": 2},
-    {"name": "Mama's Kitchen", "setting": 2, "price": 2, "cuisines": 4, "pet": 2, "seating": 1},
-    {"name": "Boba Bliss", "setting": 3, "price": 3, "cuisines": 6, "pet": 2, "seating": 1},
-    {"name": "The Wok", "setting": 1, "price": 1, "cuisines": 2, "pet": 2, "seating": 1},
-    {"name": "Taco Town", "setting": 2, "price": 2, "cuisines": 3, "pet": 2, "seating": 1},
-    {"name": "Gusto Italiano", "setting": 3, "price": 3, "cuisines": 4, "pet": 2, "seating": 1},
-    {"name": "The Pizza Place", "setting": 1, "price": 2, "cuisines": 5, "pet": 2, "seating": 1},
-    {"name": "Dragon's Den", "setting": 2, "price": 3, "cuisines": 2, "pet": 2, "seating": 1},
-    {"name": "The Sizzling Fajitas", "setting": 3, "price": 1, "cuisines": 3, "pet": 2, "seating": 1},
-    {"name": "Bella Italia", "setting": 1, "price": 2, "cuisines": 4, "pet": 2, "seating": 1},
-    {"name": "The Big Cheese", "setting": 2, "price": 3, "cuisines": 5, "pet": 2, "seating": 1},
-    {"name": "Tea Time", "setting": 3, "price": 1, "cuisines": 6, "pet": 2, "seating": 1},
-    {"name": "The Chinese Takeout", "setting": 1, "price": 1, "cuisines": 2, "pet": 2, "seating": 2},
-    {"name": "Taqueria Express", "setting": 2, "price": 2, "cuisines": 3, "pet": 2, "seating": 2},
-    {"name": "Il Ristorante", "setting": 3, "price": 3, "cuisines": 4, "pet": 2, "seating": 1},
-    {"name": "The Pizza Parlor", "setting": 1, "price": 2, "cuisines": 5, "pet": 2, "seating": 1}
+    {
+        "name": "The Tasty Thai", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 2, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "La Taqueria", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 3, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "Roma Ristorante", 
+        "setting": 3, 
+        "price": 1, 
+        "cuisines": 4, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Slice Joint", 
+        "setting": 1, 
+        "price": 1, 
+        "cuisines": 5, 
+        "pet": 1, 
+        "seating": 2
+    },
+    {
+        "name": "Mama's Kitchen", 
+        "setting": 2, 
+        "price": 2, 
+        "cuisines": 4, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {   
+        "name": "Boba Bliss", 
+        "setting": 3, 
+        "price": 3, 
+        "cuisines": 6, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Wok", 
+        "setting": 1, 
+        "price": 1, 
+        "cuisines": 2, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "Taco Town", 
+        "setting": 2, 
+        "price": 2, 
+        "cuisines": 3, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "Gusto Italiano", 
+        "setting": 3, 
+        "price": 3, 
+        "cuisines": 4, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Pizza Place", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 5,
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "Dragon's Den", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 2, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Sizzling Fajitas", 
+        "setting": 3, 
+        "price": 1, 
+        "cuisines": 3, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "Bella Italia", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 4, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Big Cheese", 
+        "setting": 2, 
+        "price": 3, 
+        "cuisines": 5,
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "Tea Time", 
+        "setting": 3, 
+        "price": 1, 
+        "cuisines": 6, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Chinese Takeout", 
+        "setting": 1, 
+        "price": 1, 
+        "cuisines": 2, 
+        "pet": 2, 
+        "seating": 2
+    },
+    {
+        "name": "Taqueria Express", 
+        "setting": 2, 
+        "price": 2, 
+        "cuisines": 3, 
+        "pet": 2, 
+        "seating": 2
+    },
+    {
+        "name": "Il Ristorante", 
+        "setting": 3, 
+        "price": 3, 
+        "cuisines": 4, 
+        "pet": 2, 
+        "seating": 1
+    },
+    {
+        "name": "The Pizza Parlor", 
+        "setting": 1, 
+        "price": 2, 
+        "cuisines": 5, 
+        "pet": 2, 
+        "seating": 1
+    }
 ]  
