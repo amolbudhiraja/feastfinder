@@ -5,7 +5,7 @@ const { Configuration, OpenAIApi } = require("openai");
 /** Get info associated with restaurantName. */
 async function getInfo(restaurantName) {
     const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: process.env.REACT_APP_OPEN_AI_API_KEY,
     });
     const openai = new OpenAIApi(configuration);
     const response = await openai.createCompletion({
