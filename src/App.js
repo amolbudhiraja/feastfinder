@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import getReccomendation from './backend/recsys';
 
 function App() {
+  getReccomendation(); 
   return (
     <div className="App">
       <header className="App-header">
