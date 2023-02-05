@@ -142,6 +142,10 @@ body {
 .question-text {
   font-size: 20px;
 }
+
+.question-count {
+  margin-bottom: 10px;
+}
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
   width: 100%;
@@ -178,4 +182,113 @@ button:focus {
 
 button svg {
   margin-right: 5px;
+}
+
+.restaurant-list {
+  display: flex;
+}
+.images {
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+
+.restaurant-1 {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: 10px;
+    margin-right: 100px;
+}
+.restaurant1-name {
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: -1px;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.restaurant1-percentSimilarity {
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: -1px;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:#4b4b4b
+}
+
+.restaurant-2 {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.restaurant-2:hover {
+  color:#4b4b4b;
+}
+.restaurant2-name {
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: -1px;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.restaurant2-percentSimilarity {
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: -1px;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold;
+  margin-top: 0px;
+  color:#4b4b4b
+}
+
+.restaurant-3 {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: 10px;
+  margin-left: 100px;
+}
+
+.restaurant3-name {
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: -1px;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.restaurant3-percentSimilarity {
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: -1px;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold;
+  margin-top: 0px;
+  color:#4b4b4b
+}
+
+img {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 200 px;
+  width: 400 px;
 }
