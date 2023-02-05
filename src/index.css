@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -22,28 +24,12 @@ body {
 }
 
 .app {
-  /* background-color: #a5b0d8;
-  width: 450px;
-  min-height: 200px;
-  height: min-content;
-  border-radius: 15px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
   text-align: center;
 }
 .question-card {
-  /* Center the div  */
   margin: 0 auto;
-
-  /* Dimensions  */
-  width: 450px; /* Can be in percentage also. */
+  width: 450px; 
   height: auto;
-
-  /* Visual  */
   background-color: rgb(255, 255, 255);
   padding: 16px;
   border-radius: 16px;
@@ -51,13 +37,20 @@ body {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
-/* .foodBackground {
-  background-size: 150px;
-  width: 250px;
-  height: 300px;
-  border: 2px solid;
-  color: pink;
-} */
+
+.question-card2 {
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 450px; 
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 16px;
+  border-radius: 16px;
+  color: rgb(9, 9, 9);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
 
 .feastFinder {
   color: #111; 
@@ -87,6 +80,8 @@ body {
   letter-spacing: -1px;
   font-family: 'Helvetica Neue', sans-serif; 
   font-weight: normal;
+  margin-bottom: 10px;
+  margin-left: 15px;
 
 }
 
@@ -133,12 +128,6 @@ body {
   font-size: 0.8rem;
 }
 
-.score-section {
-  display: flex;
-  font-size: 24px;
-  align-items: center;
-}
-
 .question-text {
   font-size: 20px;
 }
@@ -146,7 +135,7 @@ body {
 .question-count {
   margin-bottom: 10px;
 }
-/* ANSWERS/RIGHT SECTION */
+
 .answer-section {
   width: 100%;
   display: flex;
@@ -167,7 +156,6 @@ button {
   align-items: center;
   margin-bottom: 15px;
   margin-top: 15px;
-  /* border: 5px solid #234668; */
   cursor: pointer;
   border: none;
 }
@@ -189,11 +177,11 @@ button svg {
 }
 .images {
   display: flex;
+  flex-direction: row;
   width: 200px;
   height: 200px;
+  
 }
-
-
 .restaurant-1 {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -201,7 +189,7 @@ button svg {
     cursor: pointer;
     overflow: hidden;
     outline: 10px;
-    margin-right: 100px;
+    align-items: left;
 }
 .restaurant1-name {
   text-align: left;
@@ -210,6 +198,11 @@ button svg {
   font-family: 'Helvetica Neue', sans-serif; 
   font-weight: bold;
   margin-bottom: 0px;
+}
+
+.img-txt-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .restaurant1-percentSimilarity {
@@ -285,10 +278,46 @@ button svg {
   color:#4b4b4b
 }
 
-img {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 200 px;
-  width: 400 px;
+.Logo {
+  width: 200px;
+  height: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+a:link { 
+  text-decoration: none; 
+}
+
+
+a:visited { 
+  text-decoration: none; 
+}
+
+
+a:hover { 
+  text-decoration: none;
+  color:#4b4b4b;
+}
+
+
+a:active { 
+  text-decoration: none; 
+}
+
+.cards {
+  display:flex;
+  flex-direction: row;
+}
+
+.image {
+  width: 200px;
+  height: 100px;
+}
+
+.flexRow{
+  display:flex;
+  flex-direction:row;
+  gap: 30px;
+
 }
