@@ -11,7 +11,7 @@ async function getInfo(restaurantName) {
     const response = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: `Give us the website, a small description, 3 most popular menu items, business hours for today, and yelp rating for ${restaurantName} in a dictionary form that we can easily convert to javascript object. Use double quotes only.`,
-    max_tokens: 250,
+    max_tokens: 350,
     temperature: 0,
     });
     let textData = response.data.choices[0].text;

@@ -2,13 +2,8 @@
 const axios = require('axios');
 
 
-class GoogleRoute{
-
-  constructor() {
-    
-  }
-
-  async getDistance( origin, destination, mode, callback ){
+class GoogleRoute {
+  async getDistance( origin, destination, mode, callback ) {
 
     let des = destination.replace(' ', '+');
     const key = 'AIzaSyAi_5wpoZ8OsOvQiZLPxV3BPeuKQPsNeG4';
@@ -47,28 +42,13 @@ class GoogleRoute{
   }
 
 }
+ 
 
+  function getRouteInformation(restaurantName) {
+    let route = new GoogleRoute();
+    let routeObject = null; 
+    route.getDistance( origin, restaurantName, 'driving', (err, res)=>{ routeObject = res; });
+    return routeObject; 
+  }
 
-
-// https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyAi_5wpoZ8OsOvQiZLPxV3BPeuKQPsNeG4
-
-
-exports.GoogleRoute = GoogleRoute;
-
-let origin = 'USC';
-let destination = 'La Taqueria';
-let mode = {
-            'walking':'walking',
-            'driving':'driving',
-            'bicycling':'bicycling',
-            'transit':'transit'
-          }
-
-let route = new GoogleRoute();
-
-route.getDistance( origin, destination, mode.driving, (err, res)=>{
-
-  console.log(res);
-});
-
-
+export default getRouteInformation; 
