@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Inspiration
+FeastFinder was born from a frustration with the traditional food discovery process. We noticed that finding small, local restaurants that offered unique and authentic dining experiences took much work. We wanted to redesign the process to connect users with their community better and provide them with a more personalized and enjoyable food discovery journey. With FeastFinder, we use the latest machine-learning technology to recommend local restaurants and bring the joy of food discovery back to the forefront.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# What it does
+FeastFinder first asks users to take a quiz where it stores and analyzes user preferences to recommend three local and small restaurants. It uses a KNN classifier to find the closest restaurants from its large pool of small restaurants and then returns the most similar to the user's preferences by euclidian distance. Then it provides the users with detailed information about each place such as their hours, directions, a description about the place, and its most popular menu items. This is information had either been compiled in our dataset, calculated using the Google Maps API, or generated using the Open AI GPT-3 API.
 
-## Available Scripts
+# Instructions
+To run this project locally, first `git clone` this repository. Then run `npm install` to install all of the npm dependencies as specified in the `package.json` file. Finally add the necessary environment variable(s) (`OPEN_AI_API_KEY`) in a `.env` file.  Then, use the comman `npm run start` to run the program locally on `localhost:3000`. (Note: NodeJS and NPM are required to be installed on your machine in order to run the program) 
 
-In the project directory, you can run:
+# How we built it
+We built our application with React and Javascript. We decided to make our application a front-end application as we are working with mostly static or API-based data. We first compiled and created a dataset of small restaurants around Los Angeles and assigned them specific values. We then designed a quiz and constructed a vector of the user preferences. Then we designed a KNN classifier to classify the most similar restaurants by using the euclidian distance between the user preferences and each restaurants as a heuristic. After we get the recommendations, we then source information about the restaurants from our dataset, Google Maps API, and Open AI GPT-3 API and display this information as a view for the user.
 
-### `npm start`
+# Challenges we ran into
+Throughout the process we ran into numerous bugs or issues that we had to overcome in order to complete our project. Most significantly, we had frequently exceeded the rate limits on our APIs due to frequent testing and repeated API calls. Hence, we had to optimize our code to minimize the number of API calls it makes. Accordingly, we are now able to comfortably stay within the rate limits.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Accomplishments that we're proud of + What we learned
+We are very proud of our project! We worked very hard throughout the time and really enjoyed working as a team. Specifically, we are very proud of the following achievements:
+* Creating the KNN Classifier. We designed it to optimize speed and efficiency.
+* Creating an easy-to-use, simple, and intuitive user interface.
+* Learning and leveraging new technologies like the Open AI GPT-3 API and the Google Maps API.
+* Making our code very efficient and compact.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# What's next for Feast Finder
+Next steps for our application include:
+* Increase our dataset and add more local small businesses.
+* Add a realtime video-based translation feature to aid people visiting restaurants with menus in foreign languages.
+* Add Doordash API integration to allow in app ordering of food.
