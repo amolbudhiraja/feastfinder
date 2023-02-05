@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-//import './backend/recsys';
-
+import React, { useEffect, useState } from 'react';
+import {getReccomendation, similarityCalculator} from './backend/recsys.js';
 
 export default function App() {
 	const images = [
@@ -9,82 +8,64 @@ export default function App() {
     "https://img.freepik.com/free-vector/man-thinking-concept-illustration_114360-7920.jpg?w=1380&t=st=1675501020~exp=1675501620~hmac=45c0815e2062d73a74f1f61cf7d1880cc32e22bdd183a8e3f490f8bf3816b19c",
     "https://img.freepik.com/free-vector/italian-cuisine-abstract-illustration_335657-5238.jpg?w=1380&t=st=1675501087~exp=1675501687~hmac=d157d13313513edd5e39efeb6676eeecf53fbdd7a686fc3a9c508c0e4edb0edd"
   ]
+  /* List of questions for initial onboarding poll */
   const questions = [
 		{
 			questionText: 'What is your favorite dining setting? 🍽️',
 			answerOptions: [
-				{ answerText: 'Casual-Dining', value: 1 },
-				{ answerText: 'Restuarant', value: 2 },
-				{ answerText: 'High-End', value: 3 },
+				{ answerType: "setting", answerText: 'Casual-Dining', value: 1 },
+				{ answerType: "setting", answerText: 'Restuarant', value: 2 },
+				{ answerType: "setting", answerText: 'High-End', value: 3 },
 			],
 		},
 		{
 			questionText: 'What is your ideal pricepoint? 🤑',
 			answerOptions: [
-				{ answerText: '$', value: 1 },
-				{ answerText: '$$', value: 2 },
-				{ answerText: '$$$', value: 3 },
+				{ answerType: "price", answerText: '$', value: 1 },
+				{ answerType: "price", answerText: '$$', value: 2 },
+				{ answerType: "price", answerText: '$$$', value: 3 },
 			],
 		},
 		{
 			questionText: 'Which cuisine are you feeling? 🍝',
 			answerOptions: [
-				{ answerText: 'Western', value: 1 },
-				{ answerText: 'Asian', value: 2 },
-				{ answerText: 'Mexican', value: 3 },
-				{ answerText: 'Italian', value: 4 },
-        { answerText: 'Drinks', value: 5 },
+				{ answerType: "cuisine", answerText: 'Western', value: 1 },
+				{ answerType: "cuisine", answerText: 'Asian', value: 2 },
+				{ answerType: "cuisine", answerText: 'Mexican', value: 3 },
+				{ answerType: "cuisine", answerText: 'Italian', value: 4 },
+        { answerType: "cuisine", answerText: 'Drinks', value: 5 },
 			],
 		},
 		{
 			questionText: 'Are you pet-friendly? 🐕',
 			answerOptions: [
-				{ answerText: 'Yes', value: 1 },
-				{ answerText: 'No', value: 2 },
+				{ answerType: "petFriendly", answerText: 'Yes', value: 1 },
+				{ answerType: "petFriendly", answerText: 'No', value: 2 },
+			],
+		},
+    {
+			questionText: 'What are your seating preferences?',
+			answerOptions: [
+				{ answerType: "seating", answerText: 'Seating', value: 1 },
+				{ answerType: "seating", answerText: 'No seating', value: 2 },
 			],
 		},
 	];
 
-  const results = [
-    {
-      imageLink: "",
-      resultDetails: [
-      {name: "Panda Express", pricePoint: "$$"}
-      ]
-    },
-    {
-      imageLink: "",
-      resultDetails: [
-      {name: "Panda Express", pricePoint: "$$"}
-      ]
-    },
-    {
-      imageLink: "",
-      resultDetails: [
-      {name: "Panda Express", pricePoint: "$$"}
-      ]
-    },
-    {
-      imageLink: "",
-      resultDetails: [
-      {name: "Panda Express", pricePoint: "$$"}
-      ]
-    }
-  ]
-
-  var dict = {};
+  const [data, setData] = useState({});
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
-	const [value, setScore] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [recList, setRecList] = useState([]);
+	// const [value, setScore] = useState(0);
+  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-	const handleAnswerOptionClick = () => {
-    //changes the background image
-    let nextImageIndex = currentImageIndex + 1;
-    if (nextImageIndex >= images.length) {
-      nextImageIndex = 0;
-    }
-    setCurrentImageIndex(nextImageIndex);
+  /* Changes background image, adds chosen values to dictionary, and changes to the next question once choice is clicked */
+	const handleAnswerOptionClick = (choice, value) => {
+    console.log(choice + " " + value);
+
+    //sets dictionary value to choice and value
+    setData({...data, [choice]: value});
+    console.log(data);
 
     //changes to the next question once clicked
 		const nextQuestion = currentQuestion + 1;
@@ -92,47 +73,59 @@ export default function App() {
 			setCurrentQuestion(nextQuestion);
 		} else {
 			setShowScore(true);
+      setRecList(getResults());
 		}
-
-    // dict[choice] = value;
 	};
+  
+  /* Passes in the user's choices through backend restaurant recommender function to get best results */
+  let getResults = () => {
+    console.log(data["seating"]);
+    return getReccomendation(data);
+  };
 
-//   function RestaurantList() {
-//   const [restaurants, setRestaurants] = useState([]);
-
-//   useEffect(() => {
-//     async function fetchData() {
-//       const response = await fetch("./backend/recsys");
-//       const data = await response.json();
-//       setRestaurants(data);
-//     }
-//     fetchData();
-//   }, []);
-// }
+  function similarityCalculator(val) {
+    console.log("val " + val);
+    let percentDifference = 0;
+    percentDifference = (1 - val)/val * 100;
+    console.log(percentDifference);
+    return Math.trunc(100 - Math.abs(percentDifference));
+  }
 
 	return (
 		<div className='app'>
-      <div class="foodBackground" style={{ backgroundImage: `url(${images[currentImageIndex]})` }}></div>
       {showScore ? (
 				<div className='result-section'>
-          <h1 class="feastFinder2">FeastFinder🍔</h1>
+          <h1 className="feastFinder2">FeastFinder🍔</h1>
 					<div className = "results">Results:</div>
-          {/* <ul className="restaurant-list">
-            {restaurants.map(restaurant => (
-              <li className="restaurant" key={restaurant.id}>
-                <img className="restaurant-image" src={restaurant.image} alt={restaurant.name} />
-                <div className="restaurant-info">
-                  <h2 className="restaurant-name">{restaurant.name}</h2>
-                  <p className="restaurant-location">Location: {restaurant.location}</p>
-                  <p className="restaurant-price">Price Point: {restaurant.price}</p>
-                </div>
-              </li>
-            ))}
-          </ul> */}
+              {/* <div className="images">
+                <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_box_55x90.png/1280px-White_box_55x90.png"} />
+                <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_box_55x90.png/1280px-White_box_55x90.png"} />
+                <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_box_55x90.png/1280px-White_box_55x90.png"} />
+              </div> */}
+              <div className="restaurant-list">
+                  <button className="restaurant-1" >
+                    <div className="restaurant-info">
+                      <p className="restaurant1-name">{recList[0][0]} </p>
+                      <p className="restaurant1-percentSimilarity">{similarityCalculator(recList[0][1])}% similarity </p>
+                    </div>
+                  </button>
+                  <button className="restaurant-2">
+                    <div className="restaurant2-info">
+                      <p className="restaurant2-name">{recList[1][0]}</p>
+                      <p className="restaurant2-percentSimilarity">{similarityCalculator(recList[1][1])}% similarity </p>
+                    </div>
+                  </button>
+                  <button className="restaurant-3">
+                    <div className="restaurant3-info">
+                      <p className="restaurant3-name">{recList[2][0]}</p>
+                      <p className="restaurant3-percentSimilarity">{similarityCalculator(recList[2][1])}% similarity </p>
+                    </div>
+                  </button>
+              </div>
 				</div>
 			) : (
 				<>
-        <h1 class="feastFinder">FeastFinder🍔</h1>
+        <h1 className="feastFinder">FeastFinder🍔</h1>
         <div className='question-card'>
 					<div className='question-section'>
 						<div className='question-count'>
@@ -142,7 +135,7 @@ export default function App() {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={handleAnswerOptionClick}>{answerOption.answerText}</button>
+							<button onClick={() => {handleAnswerOptionClick(answerOption.answerType, answerOption.value)}}>{answerOption.answerText}</button>
 						))}
 					</div>
         </div>
