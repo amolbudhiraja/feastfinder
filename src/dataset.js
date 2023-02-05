@@ -6,6 +6,8 @@ let restaurantData = [
         "cuisines": 2, 
         "pet": 2, 
         "seating": 1
+        "URL": https://sqirlla.com/
+        "logo": https://static.vecteezy.com/system/resources/previews/002/776/039/non_2x/cartoon-illustration-isolated-object-delicious-flour-food-bakery-bread-whole-grain-toast-vector.jpg
     },
     {
         "name": "Apollonia's Pizzeria", 
@@ -14,6 +16,8 @@ let restaurantData = [
         "cuisines": 3, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Sushi Roku", 
@@ -22,6 +26,8 @@ let restaurantData = [
         "cuisines": 4, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Casa Vega", 
@@ -30,6 +36,8 @@ let restaurantData = [
         "cuisines": 5, 
         "pet": 1, 
         "seating": 2
+        "URL": 
+        "logo":
     },
     {
         "name": "Lienzo Charbroiler", 
@@ -38,6 +46,8 @@ let restaurantData = [
         "cuisines": 4, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {   
         "name": "The Oinkster", 
@@ -46,6 +56,8 @@ let restaurantData = [
         "cuisines": 6, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Nishi Restaurant", 
@@ -54,6 +66,8 @@ let restaurantData = [
         "cuisines": 2, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Taqueria Los Anaya", 
@@ -62,6 +76,8 @@ let restaurantData = [
         "cuisines": 3, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Prince of Venice", 
@@ -70,6 +86,8 @@ let restaurantData = [
         "cuisines": 4, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Little Jewel of New Orleans", 
@@ -78,6 +96,8 @@ let restaurantData = [
         "cuisines": 5,
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Bigmista's Barbecue", 
@@ -86,6 +106,8 @@ let restaurantData = [
         "cuisines": 2, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Thai Patio", 
@@ -94,6 +116,8 @@ let restaurantData = [
         "cuisines": 3, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Petros", 
@@ -102,6 +126,8 @@ let restaurantData = [
         "cuisines": 4, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Sonoratown", 
@@ -110,6 +136,8 @@ let restaurantData = [
         "cuisines": 5,
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Blue Ribbon Sushi", 
@@ -118,6 +146,8 @@ let restaurantData = [
         "cuisines": 6, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Bay Cities Italian Deli", 
@@ -126,6 +156,8 @@ let restaurantData = [
         "cuisines": 2, 
         "pet": 2, 
         "seating": 2
+        "URL": 
+        "logo":
     },
     {
         "name": "Tacos Tu Madre", 
@@ -134,6 +166,8 @@ let restaurantData = [
         "cuisines": 3, 
         "pet": 2, 
         "seating": 2
+        "URL": 
+        "logo":
     },
     {
         "name": "Daichan", 
@@ -142,6 +176,8 @@ let restaurantData = [
         "cuisines": 4, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "LudoBird", 
@@ -150,6 +186,8 @@ let restaurantData = [
         "cuisines": 5, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Mariscos Jalisco", 
@@ -158,6 +196,8 @@ let restaurantData = [
         "cuisines": 6, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
          "name": "Sugarfish", 
@@ -166,6 +206,8 @@ let restaurantData = [
          "cuisines": 1, 
          "pet": 2, 
          "seating": 1
+        "URL": 
+        "logo":
     },
     {
       "name": "The Semi-Tropic", 
@@ -174,6 +216,8 @@ let restaurantData = [
         "cuisines": 3, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Pat's King of Steaks", 
@@ -182,6 +226,8 @@ let restaurantData = [
         "cuisines": 4, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Daichan", 
@@ -190,6 +236,8 @@ let restaurantData = [
         "cuisines": 5, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Bottega Louie", 
@@ -198,6 +246,8 @@ let restaurantData = [
         "cuisines": 6, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Langer's Delicatessen", 
@@ -206,6 +256,8 @@ let restaurantData = [
         "cuisines": 2, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Konbi", 
@@ -214,6 +266,8 @@ let restaurantData = [
         "cuisines": 3, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Gjusta", 
@@ -222,6 +276,8 @@ let restaurantData = [
         "cuisines": 4, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Mariscos Jalisco", 
@@ -230,6 +286,8 @@ let restaurantData = [
         "cuisines": 5, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "The Boba Boutique", 
@@ -238,6 +296,8 @@ let restaurantData = [
         "cuisines": 6, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Leo's Tacos Truck", 
@@ -246,6 +306,8 @@ let restaurantData = [
         "cuisines": 2, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "The Factory Kitchen", 
@@ -254,6 +316,8 @@ let restaurantData = [
         "cuisines": 3, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Lucha Libre Gourmet Taco Shop", 
@@ -262,6 +326,8 @@ let restaurantData = [
         "cuisines": 4, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "Baroo Canteen", 
@@ -269,7 +335,9 @@ let restaurantData = [
         "price": 2, 
         "cuisines": 5, 
         "pet": 2, 
-        "seating": 1
+        "seating": 1        
+        "URL": 
+        "logo":
     },
     {
         "name": "Baco Mercat", 
@@ -278,6 +346,8 @@ let restaurantData = [
         "cuisines": 6, 
         "pet": 2, 
         "seating": 1
+        "URL": 
+        "logo":
     },
     {
         "name": "El Huarache Azteca", 
@@ -286,6 +356,8 @@ let restaurantData = [
         "cuisines": 2, 
         "pet": 2, 
         "seating": 1
+        "URL": https://orderelhuaracheazteca.com/
+        "logo": https://static.vecteezy.com/system/resources/previews/004/217/776/non_2x/cute-taco-cartoon-design-vector.jpg
     },
     {
         "name": "Tatsu Ramen", 
@@ -293,6 +365,8 @@ let restaurantData = [
         "price": 2, 
         "cuisines": 3, 
         "pet": 2, "seating": 1
+        "URL": https://tatsuramen.com/
+        "logo": https://tatsu.softhart.co/wp-content/uploads/2022/02/TatsuRamen_RGB_Secondary_Dragon_Circle_Red.png
     }
 ]  
 
