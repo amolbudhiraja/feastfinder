@@ -206,8 +206,8 @@ let restaurantData = [
          "cuisines": 1, 
          "pet": 2, 
          "seating": 1,
-        "URL": https://sugarfishsushi.com/,
-        "logo": https://sugarfishsushi.com/wp-content/uploads/2019/09/Wht_Fish.png
+         "URL": "https://sugarfishsushi.com/",
+         "logo": "https://sugarfishsushi.com/wp-content/uploads/2019/09/Wht_Fish.png"
     },
     {
       "name": "The Semi-Tropic", 
