@@ -364,7 +364,8 @@ let restaurantData = [
         "setting": 1, 
         "price": 2, 
         "cuisines": 3, 
-        "pet": 2, "seating": 1,
+        "pet": 2, 
+        "seating": 1,
         "URL": "https://tatsuramen.com/",
         "logo": "https://tatsu.softhart.co/wp-content/uploads/2022/02/TatsuRamen_RGB_Secondary_Dragon_Circle_Red.png"
     }
