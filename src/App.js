@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {getReccomendation, similarityCalculator} from './backend/recsys.js';
+import {getReccomendation} from './backend/recsys.js';
 
 export default function App() {
 	const images = [
