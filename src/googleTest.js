@@ -1,9 +1,10 @@
 
 const axios = require('axios');
 
-async function getDistance( origin, destination, mode ){
+async function getDistance( origin, destination, mode, callback ){
 
 
+  mode.replace(' ', '+')
   const key = 'AIzaSyAi_5wpoZ8OsOvQiZLPxV3BPeuKQPsNeG4';
   const url = 'https://maps.googleapis.com/maps/api/directions/json?';
 
@@ -22,15 +23,11 @@ async function getDistance( origin, destination, mode ){
           .then( (response)=>{
               
             let data = response.data.routes[0].legs;            
-            //console.log( data );
-            console.log( data[0].distance.text );
 
             result.distance = data[0].distance.text;
             result.duration = data[0].duration.text;
 
-            console.log( result );
-
-            cancelIdleCallback( "err", result);
+            callback( "err", result);
 
           }) 
           .catch( (err)=>{
@@ -38,16 +35,20 @@ async function getDistance( origin, destination, mode ){
               console.log( 'err' );
               
           }); 
-
 }
 
 // https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyAi_5wpoZ8OsOvQiZLPxV3BPeuKQPsNeG4
 
 let origin = 'USC';
-let destination = 'La+Taqueria';
-let mode = 'walking';
+let destination = 'La Taqueria';
+let mode = {
+            'walking':'walking',
+            'driving':'driving',
+            'bicycling':'bicycling',
+            'transit':'transit'
+          }
 
-getDistance( origin, destination, mode, (err, res)=>{
+getDistance( origin, destination, mode.driving, (err, res)=>{
 
   console.log(res);
 });
