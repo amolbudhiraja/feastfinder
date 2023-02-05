@@ -19,7 +19,6 @@ class GoogleRoute {
               let data = response.data.routes[0].legs;   
               let result = {
 
-                'origin':origin,
                 'desination':destination,
                 'mode':mode,
                 'distance':0,
@@ -47,8 +46,16 @@ class GoogleRoute {
   function getRouteInformation(restaurantName) {
     let route = new GoogleRoute();
     let routeObject = null; 
-    route.getDistance( origin, restaurantName, 'driving', (err, res)=>{ routeObject = res; });
+    route.getDistance( 'USC', restaurantName, 'driving', (err, res)=>{ 
+      
+      console.log( res );
+      routeObject = res;
+    
+    });
     return routeObject; 
   }
 
 export default getRouteInformation; 
+
+
+
